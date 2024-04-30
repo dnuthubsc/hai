@@ -3,8 +3,8 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "hi " .. Fluent.Version,
-    SubTitle = "by dawid",
+    Title = "ASTD " .. Fluent.Version,
+    SubTitle = "by ME",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
@@ -38,40 +38,22 @@ do
 
 
     Tabs.Main:AddButton({
-        Title = "Button",
+        Title = "Teleport Easter",
         Description = "Very important button",
         Callback = function()
-            Window:Dialog({
-                Title = "Title",
-                Content = "This is a dialog",
-                Buttons = {
-                    {
-                        Title = "Confirm",
-                        Callback = function()
-                            print("Confirmed the dialog.")
-                        end
-                    },
-                    {
-                        Title = "Cancel",
-                        Callback = function()
-                            print("Cancelled the dialog.")
-                        end
-                    }
-                }
-            })
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-73, 96, -2259)
         end
     })
 
 
 
-    local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Teleport Easter hi", Default = false })
+    local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "WIP", Default = false })
 
     Toggle:OnChanged(function()
     while Options.MyToggle.Value == true do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-73, 96, -2259)
+        print("WIP")
         wait(0)
     end
-
         print("Toggle changed:", Options.MyToggle.Value)
     end)
 
