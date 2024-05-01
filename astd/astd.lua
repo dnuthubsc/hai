@@ -47,11 +47,11 @@ do
 
 
 
-    local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "WIP", Default = false })
+    local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Anit-lag", Default = false })
 
     Toggle:OnChanged(function()
     while Options.MyToggle.Value == true do
-        print("WIP")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 196, 0)
         wait(0)
     end
         print("Toggle changed:", Options.MyToggle.Value)
