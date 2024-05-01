@@ -51,7 +51,7 @@ do
 
     Toggle:OnChanged(function()
     while Options.MyToggle.Value == true do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 196, 0)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 19600000, 0)
         wait(0)
     end
         print("Toggle changed:", Options.MyToggle.Value)
